@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F9897874FFEF6185F3C77E25D1DC382 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		3CB78306330D95AFFCA56316B7399A11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		52689B105083D103989000DD977DCFAC /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F836196A117288BB4BC8B382E0B0677 /* ReplaceMe.m */; };
+		6E579FF358AF2261C8682A7FA383EAA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7C80890E605CD15711728A79A8CFB868 /* Pods-AimBrain_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBC567A28EA77A0D46B1F4CDCCE3E49 /* Pods-AimBrain_Tests-dummy.m */; };
+		95958E4D8D57130381C7C01749552CAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B991A49F4C12A4F8462C02B69D83DB11 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6D89E5C4FE4624A6E55340CB03135 /* Pods-dummy.m */; };
+		DC4BB8C2970A904CED3224A5067AD5CF /* AimBrain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4317128213A6CA84D2B537512A80CA /* AimBrain-dummy.m */; };
+		FB87A0812087F883F7536A18F2E0E619 /* Pods-AimBrain Banking Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 891EC4235D3B41E8C3C37765849096F4 /* Pods-AimBrain Banking Demo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		911C298A7704C1879819C98ED17BA5F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A9B1D6164F47FEFA11FCD001AE4351F;
+			remoteInfo = AimBrain;
+		};
+		B6DB51AC2E6F79657917857B0CCC1F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10553EA0F4107A3069B33A39F44177DF;
+			remoteInfo = "AimBrain-AimBrain";
+		};
+		E704717DED9811240CB4F369D4EFF35B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A9B1D6164F47FEFA11FCD001AE4351F;
+			remoteInfo = AimBrain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F95F094EEBBF79A296F67DA64F6A22 /* AimBrain.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AimBrain.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		07443D5495B57B00347E5D8E3FCBE0BF /* Pods-AimBrain Banking Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AimBrain Banking Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		0C073BB2FC315075B9DE90C24FE2C52B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		2288DBAE9E2916175DC8654976FE645B /* libAimBrain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAimBrain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB0F8733E9E3B8927CC95645AB58234 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F7867CA1F82546B492333E82AC189B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		43382E4B4186CFD2B08F93407AD07B08 /* Pods-AimBrain Banking Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AimBrain Banking Demo-frameworks.sh"; sourceTree = "<group>"; };
+		4C628B9EF496BFAC3444B67D1F11EEC8 /* Pods-AimBrain_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AimBrain_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4D9146128A5AB4CEBBDAC452B23272A3 /* Pods-AimBrain Banking Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AimBrain Banking Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		4F05F0CAE199A489348EBE306CD7ED9C /* AimBrain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AimBrain-prefix.pch"; sourceTree = "<group>"; };
+		563049C4C22CAC231DC517C8CB837DE0 /* libPods-AimBrain Banking Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AimBrain Banking Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A0B88DE0A4AADCE8AC19F36676E91C /* Pods-AimBrain Banking Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AimBrain Banking Demo.release.xcconfig"; sourceTree = "<group>"; };
+		63D2DA3B632467AEA9A8E86EC1BC427A /* Pods-AimBrain_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AimBrain_Tests-resources.sh"; sourceTree = "<group>"; };
+		65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AimBrain.xcconfig; sourceTree = "<group>"; };
+		68B49D08BD45C56C02A7CBE714877EF3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		87FF39F975B3B22903FC626F33F446FC /* Pods-AimBrain Banking Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AimBrain Banking Demo-resources.sh"; sourceTree = "<group>"; };
+		891EC4235D3B41E8C3C37765849096F4 /* Pods-AimBrain Banking Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AimBrain Banking Demo-dummy.m"; sourceTree = "<group>"; };
+		8F836196A117288BB4BC8B382E0B0677 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		9BB6D89E5C4FE4624A6E55340CB03135 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		A3AB0180F430FE9E7E4030A04DF10298 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA27E9ECD11CCD89DEBC766CA2D67A1B /* Pods-AimBrain Banking Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AimBrain Banking Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ACBC567A28EA77A0D46B1F4CDCCE3E49 /* Pods-AimBrain_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AimBrain_Tests-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C2A85B03E6014C0ECF2C20FBB158FA3D /* Pods-AimBrain_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AimBrain_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CC7DFE11CCF63D9AFE0A8B7D7FAAEC56 /* Pods-AimBrain_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AimBrain_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		DB32FAE45BE7BA2A90D42DF5054161C2 /* Pods-AimBrain_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AimBrain_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF8F4C4655B98864FF375C7F828C8375 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		E1B6F2CE97837747A137B7F9EC710EF8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		E7E7ADB0574FBFB6F09F8A268ED74DB3 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		E82C2BD5C95CE5B1ECF2BC5057F5BACC /* Pods-AimBrain_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AimBrain_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EB9F6349B737C355F85845296C55D2A8 /* libPods-AimBrain_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AimBrain_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4317128213A6CA84D2B537512A80CA /* AimBrain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AimBrain-dummy.m"; sourceTree = "<group>"; };
+		FE75FD2A1CE3E8C36878F50AB69D9BA5 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E78C4AC537A1782BCFD134B2B8940E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E579FF358AF2261C8682A7FA383EAA6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		800A5B0E26560066991C85A2F32518E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB78306330D95AFFCA56316B7399A11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2208AD797F4ECADD667C0C478D4C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9897874FFEF6185F3C77E25D1DC382 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A35AC9760938ED3A0EEAD71C21B3C1E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95958E4D8D57130381C7C01749552CAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F9A61DA6B67565594DC4F0D15CDA71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FBADD4C4C312933525779355B4A728B /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				5AF2ED3E1B1DF375ACFB148B356F91A5 /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		23F124B36981587A4F2E341B8AEC8517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6F2CE97837747A137B7F9EC710EF8 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		460B66CCA74C340BBE88E4FA30799293 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8F836196A117288BB4BC8B382E0B0677 /* ReplaceMe.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		465B348A9C9CC43DF3E3C71E5FA0A618 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				460B66CCA74C340BBE88E4FA30799293 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FBADD4C4C312933525779355B4A728B /* Crashlytics */,
+				BD8B321ABCC17A2AA08C4077E26ECA81 /* Fabric */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		505FA5F1F6808728BEBE5B0B6B8B5B2C /* Pods-AimBrain Banking Demo */ = {
+			isa = PBXGroup;
+			children = (
+				AA27E9ECD11CCD89DEBC766CA2D67A1B /* Pods-AimBrain Banking Demo-acknowledgements.markdown */,
+				4D9146128A5AB4CEBBDAC452B23272A3 /* Pods-AimBrain Banking Demo-acknowledgements.plist */,
+				891EC4235D3B41E8C3C37765849096F4 /* Pods-AimBrain Banking Demo-dummy.m */,
+				43382E4B4186CFD2B08F93407AD07B08 /* Pods-AimBrain Banking Demo-frameworks.sh */,
+				87FF39F975B3B22903FC626F33F446FC /* Pods-AimBrain Banking Demo-resources.sh */,
+				07443D5495B57B00347E5D8E3FCBE0BF /* Pods-AimBrain Banking Demo.debug.xcconfig */,
+				63A0B88DE0A4AADCE8AC19F36676E91C /* Pods-AimBrain Banking Demo.release.xcconfig */,
+			);
+			name = "Pods-AimBrain Banking Demo";
+			path = "Target Support Files/Pods-AimBrain Banking Demo";
+			sourceTree = "<group>";
+		};
+		5AF2ED3E1B1DF375ACFB148B356F91A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C073BB2FC315075B9DE90C24FE2C52B /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6060AD98F3203BDEBCCABC1D9CF76313 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0F8733E9E3B8927CC95645AB58234 /* Pods-acknowledgements.markdown */,
+				DF8F4C4655B98864FF375C7F828C8375 /* Pods-acknowledgements.plist */,
+				9BB6D89E5C4FE4624A6E55340CB03135 /* Pods-dummy.m */,
+				FE75FD2A1CE3E8C36878F50AB69D9BA5 /* Pods-frameworks.sh */,
+				E7E7ADB0574FBFB6F09F8A268ED74DB3 /* Pods-resources.sh */,
+				3F7867CA1F82546B492333E82AC189B6 /* Pods.debug.xcconfig */,
+				68B49D08BD45C56C02A7CBE714877EF3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		6C6F01B99EF8C30DB45EDA937EA631A4 /* Pods-AimBrain_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4C628B9EF496BFAC3444B67D1F11EEC8 /* Pods-AimBrain_Tests-acknowledgements.markdown */,
+				C2A85B03E6014C0ECF2C20FBB158FA3D /* Pods-AimBrain_Tests-acknowledgements.plist */,
+				ACBC567A28EA77A0D46B1F4CDCCE3E49 /* Pods-AimBrain_Tests-dummy.m */,
+				CC7DFE11CCF63D9AFE0A8B7D7FAAEC56 /* Pods-AimBrain_Tests-frameworks.sh */,
+				63D2DA3B632467AEA9A8E86EC1BC427A /* Pods-AimBrain_Tests-resources.sh */,
+				DB32FAE45BE7BA2A90D42DF5054161C2 /* Pods-AimBrain_Tests.debug.xcconfig */,
+				E82C2BD5C95CE5B1ECF2BC5057F5BACC /* Pods-AimBrain_Tests.release.xcconfig */,
+			);
+			name = "Pods-AimBrain_Tests";
+			path = "Target Support Files/Pods-AimBrain_Tests";
+			sourceTree = "<group>";
+		};
+		75589009824DC9A45FF607B69F4EF548 /* AimBrain */ = {
+			isa = PBXGroup;
+			children = (
+				465B348A9C9CC43DF3E3C71E5FA0A618 /* Pod */,
+				BA4D6383D0C5C9D4D6DAC94C01EE0703 /* Support Files */,
+			);
+			name = AimBrain;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				E1EC46089E83DE2C697B45D7E9CA4E21 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */,
+				8E3E66302844A4189511FCFE258C7202 /* Products */,
+				95E210A130F1402452F74735648407D9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E3E66302844A4189511FCFE258C7202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05F95F094EEBBF79A296F67DA64F6A22 /* AimBrain.bundle */,
+				2288DBAE9E2916175DC8654976FE645B /* libAimBrain.a */,
+				A3AB0180F430FE9E7E4030A04DF10298 /* libPods.a */,
+				563049C4C22CAC231DC517C8CB837DE0 /* libPods-AimBrain Banking Demo.a */,
+				EB9F6349B737C355F85845296C55D2A8 /* libPods-AimBrain_Tests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95E210A130F1402452F74735648407D9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6060AD98F3203BDEBCCABC1D9CF76313 /* Pods */,
+				505FA5F1F6808728BEBE5B0B6B8B5B2C /* Pods-AimBrain Banking Demo */,
+				6C6F01B99EF8C30DB45EDA937EA631A4 /* Pods-AimBrain_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA4D6383D0C5C9D4D6DAC94C01EE0703 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */,
+				ED4317128213A6CA84D2B537512A80CA /* AimBrain-dummy.m */,
+				4F05F0CAE199A489348EBE306CD7ED9C /* AimBrain-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AimBrain";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD8B321ABCC17A2AA08C4077E26ECA81 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				23F124B36981587A4F2E341B8AEC8517 /* Frameworks */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E1EC46089E83DE2C697B45D7E9CA4E21 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75589009824DC9A45FF607B69F4EF548 /* AimBrain */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10553EA0F4107A3069B33A39F44177DF /* AimBrain-AimBrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1E212126DAB5D5C62BAFAB86D9E626 /* Build configuration list for PBXNativeTarget "AimBrain-AimBrain" */;
+			buildPhases = (
+				BBC87179D20179E27FC365C87ED2FB25 /* Sources */,
+				F4F9A61DA6B67565594DC4F0D15CDA71 /* Frameworks */,
+				80FB39FDDCE45397C45F995C93E45CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AimBrain-AimBrain";
+			productName = "AimBrain-AimBrain";
+			productReference = 05F95F094EEBBF79A296F67DA64F6A22 /* AimBrain.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		1469924FC52F60B0068FA24EEFCB3EFC /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C358AA8BB91700063133597D41C4E0E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				60DB2522D6809309FA2F3B04848E7536 /* Sources */,
+				2E78C4AC537A1782BCFD134B2B8940E0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = A3AB0180F430FE9E7E4030A04DF10298 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2AA686C5CEED0167E11F776865977D69 /* Pods-AimBrain Banking Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C68ABAA9AA3C0C41A90F789D96AF81B /* Build configuration list for PBXNativeTarget "Pods-AimBrain Banking Demo" */;
+			buildPhases = (
+				6741573CD76949943AFFCD83408FC64D /* Sources */,
+				800A5B0E26560066991C85A2F32518E3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BF1F74A8041765CD46857F4F2007F5B /* PBXTargetDependency */,
+			);
+			name = "Pods-AimBrain Banking Demo";
+			productName = "Pods-AimBrain Banking Demo";
+			productReference = 563049C4C22CAC231DC517C8CB837DE0 /* libPods-AimBrain Banking Demo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5A9B1D6164F47FEFA11FCD001AE4351F /* AimBrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 994955BE95C48AD6EBC7030901BAE954 /* Build configuration list for PBXNativeTarget "AimBrain" */;
+			buildPhases = (
+				4D832EF2027DD4E7B75F5369D3EF9469 /* Sources */,
+				A35AC9760938ED3A0EEAD71C21B3C1E6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E7043E74A879C53B4054C5DCD191E20 /* PBXTargetDependency */,
+			);
+			name = AimBrain;
+			productName = AimBrain;
+			productReference = 2288DBAE9E2916175DC8654976FE645B /* libAimBrain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DE556E9B73D3CB2DA76088184AE4A263 /* Pods-AimBrain_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B3C7CC068359BC4A02FE53222AF4123 /* Build configuration list for PBXNativeTarget "Pods-AimBrain_Tests" */;
+			buildPhases = (
+				30B4B1444B12C45210C86833E293405C /* Sources */,
+				8D2208AD797F4ECADD667C0C478D4C25 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC407525ADB18EA5DE2004E4C57E43C7 /* PBXTargetDependency */,
+			);
+			name = "Pods-AimBrain_Tests";
+			productName = "Pods-AimBrain_Tests";
+			productReference = EB9F6349B737C355F85845296C55D2A8 /* libPods-AimBrain_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8E3E66302844A4189511FCFE258C7202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A9B1D6164F47FEFA11FCD001AE4351F /* AimBrain */,
+				10553EA0F4107A3069B33A39F44177DF /* AimBrain-AimBrain */,
+				1469924FC52F60B0068FA24EEFCB3EFC /* Pods */,
+				2AA686C5CEED0167E11F776865977D69 /* Pods-AimBrain Banking Demo */,
+				DE556E9B73D3CB2DA76088184AE4A263 /* Pods-AimBrain_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80FB39FDDCE45397C45F995C93E45CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30B4B1444B12C45210C86833E293405C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C80890E605CD15711728A79A8CFB868 /* Pods-AimBrain_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D832EF2027DD4E7B75F5369D3EF9469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4BB8C2970A904CED3224A5067AD5CF /* AimBrain-dummy.m in Sources */,
+				52689B105083D103989000DD977DCFAC /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB2522D6809309FA2F3B04848E7536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B991A49F4C12A4F8462C02B69D83DB11 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6741573CD76949943AFFCD83408FC64D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB87A0812087F883F7536A18F2E0E619 /* Pods-AimBrain Banking Demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC87179D20179E27FC365C87ED2FB25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BF1F74A8041765CD46857F4F2007F5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AimBrain;
+			target = 5A9B1D6164F47FEFA11FCD001AE4351F /* AimBrain */;
+			targetProxy = 911C298A7704C1879819C98ED17BA5F5 /* PBXContainerItemProxy */;
+		};
+		8E7043E74A879C53B4054C5DCD191E20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AimBrain-AimBrain";
+			target = 10553EA0F4107A3069B33A39F44177DF /* AimBrain-AimBrain */;
+			targetProxy = B6DB51AC2E6F79657917857B0CCC1F8B /* PBXContainerItemProxy */;
+		};
+		BC407525ADB18EA5DE2004E4C57E43C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AimBrain;
+			target = 5A9B1D6164F47FEFA11FCD001AE4351F /* AimBrain */;
+			targetProxy = E704717DED9811240CB4F369D4EFF35B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10EB9E709525E10C410E8DAA21DB8CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = AimBrain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		42122F0CEE51B92226C8537AA511DCC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AimBrain/AimBrain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		48110BA1A86F825B6D44BEB7EB9FADF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB32FAE45BE7BA2A90D42DF5054161C2 /* Pods-AimBrain_Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5227BABB6B952BD482B98F02F17CE6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82C2BD5C95CE5B1ECF2BC5057F5BACC /* Pods-AimBrain_Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6569F07DC21AD8B72752685013E3D9D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9199EF74305B466E83664B8C113EBE81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F7867CA1F82546B492333E82AC189B6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A14E2444F162A20E3776820E0ADFFB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3ED28BEB68211C115C93CC89A1093AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07443D5495B57B00347E5D8E3FCBE0BF /* Pods-AimBrain Banking Demo.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB89927C5D95A29EE9F75D6295272182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = AimBrain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BA4A5C7C3C177C1E708E55FD2305C1FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B49D08BD45C56C02A7CBE714877EF3 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EB011EE6D1606096F9A16C45003F814E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A0B88DE0A4AADCE8AC19F36676E91C /* Pods-AimBrain Banking Demo.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EDC4DE3AE79E61D9174B592B4853E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D65ACFC1B0D32173B7669C5708DD9F /* AimBrain.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AimBrain/AimBrain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1E212126DAB5D5C62BAFAB86D9E626 /* Build configuration list for PBXNativeTarget "AimBrain-AimBrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB89927C5D95A29EE9F75D6295272182 /* Debug */,
+				10EB9E709525E10C410E8DAA21DB8CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6569F07DC21AD8B72752685013E3D9D8 /* Debug */,
+				A14E2444F162A20E3776820E0ADFFB52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C358AA8BB91700063133597D41C4E0E /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9199EF74305B466E83664B8C113EBE81 /* Debug */,
+				BA4A5C7C3C177C1E708E55FD2305C1FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B3C7CC068359BC4A02FE53222AF4123 /* Build configuration list for PBXNativeTarget "Pods-AimBrain_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48110BA1A86F825B6D44BEB7EB9FADF7 /* Debug */,
+				5227BABB6B952BD482B98F02F17CE6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		994955BE95C48AD6EBC7030901BAE954 /* Build configuration list for PBXNativeTarget "AimBrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC4DE3AE79E61D9174B592B4853E112 /* Debug */,
+				42122F0CEE51B92226C8537AA511DCC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C68ABAA9AA3C0C41A90F789D96AF81B /* Build configuration list for PBXNativeTarget "Pods-AimBrain Banking Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3ED28BEB68211C115C93CC89A1093AF /* Debug */,
+				EB011EE6D1606096F9A16C45003F814E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
