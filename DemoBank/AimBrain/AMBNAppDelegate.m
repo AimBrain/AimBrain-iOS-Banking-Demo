@@ -1,5 +1,5 @@
 #import "AMBNAppDelegate.h"
-#import <AimBrainSDK.h>
+#import <AimBrainSDK/AimBrainSDK.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import "AMBNSignInViewController.h"

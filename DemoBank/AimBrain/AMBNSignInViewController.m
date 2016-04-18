@@ -36,9 +36,6 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -112,12 +109,12 @@
             }
             case 1:
             {
-                [self startFaceAuthentication];
+                [self startFaceAuthenticationWithMovie];
                 break;
             }
             case 2:
             {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Templates are being prepared" message:@"Please try again shortly" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Generating template." message:@"Please try again in a few seconds" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
                 break;
             }
@@ -142,35 +139,18 @@
     }];
 
 }
--(void) startFaceAuthentication{
+
+-(void) startFaceAuthenticationWithMovie{
     [self.activityIndicator startAnimating];
-    [[AMBNManager sharedInstance] openFaceImagesCaptureWithTopHint:@"To authenticate please face the camera directly and press 'camera' button" bottomHint:@"Position your face fully within the outline with eyes between the lines." batchSize:3 delay:0.3 fromViewController:self completion:^(BOOL success, NSArray *images) {
-            [[AMBNManager sharedInstance] authenticateFaceImages:images completion:^(NSNumber *score, NSNumber *liveliness, NSError *error) {
-
-                [self.activityIndicator stopAnimating];
-                if(error){
-                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the picture, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles: @"Cancel", nil];
-                    [alertView show];
-                    
-                }else{
-                    if([score floatValue] >= 0.5 && [liveliness floatValue] >= 0.5){
-                        AMBNAppDelegate * delegate = [UIApplication sharedApplication].delegate;
-                        [delegate setBankViewAsRootViewController];
-                        
-                    }else{
-                        NSString * message = @"";
-                        if([liveliness floatValue] < 0.5){
-                            message = [NSString stringWithFormat:@"Your face matched to %.0f%% but we believe it was a static image", [score floatValue] * 100 ];
-                        }
-                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Access denied" message:message delegate:self cancelButtonTitle:@"Retry" otherButtonTitles: @"Cancel", nil];
-                        [alertView show];
-                    }
-                }
-
- 
-            }];
+    AMBNFaceRecordingViewController *faceRecordingViewController = [[AMBNManager sharedInstance] instantiateFaceRecordingViewControllerWithTopHint:@"To authenticate please face the camera directly, press 'camera' button and blink" bottomHint:@"Position your face fully within the outline with eyes between the lines."
+                      recordingHint:@"Please BLINK now..."
+                        movieLength:2];
+    faceRecordingViewController.delegate = self;
+    [self presentViewController:faceRecordingViewController animated:YES completion:^{
+        
     }];
 }
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(alertView == self.enrollmentConfirmationAlert){
         switch (buttonIndex) {
@@ -182,7 +162,7 @@
             {
                 [self.activityIndicator startAnimating];
                 self.faceEnrollmentController = [[AMBNFaceEnrollmentController alloc] init];
-                [self.faceEnrollmentController startForViewController:self completion:^(BOOL success) {
+                [self.faceEnrollmentController startMovieEnrollmentForViewController:self completion:^(BOOL success) {
                     if(success){
                         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Enrollment finished successfully" delegate:nil cancelButtonTitle:@"Ok"otherButtonTitles:nil];
                         [alertView show];
@@ -199,7 +179,7 @@
         switch (buttonIndex) {
             case 0:
             {
-                [self startFaceAuthentication];
+                [self startFaceAuthenticationWithMovie];
                 break;
             }
             case 1:
@@ -212,6 +192,41 @@
         }
     }
 }
+
+- (void)faceRecordingViewController:(AMBNFaceRecordingViewController *)faceRecordingViewController recordingResult:(NSURL *)video error:(NSError *)error {
+    [faceRecordingViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    if(error){
+        [self.activityIndicator stopAnimating];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+    } else {
+        [[AMBNManager sharedInstance] authenticateFaceMovie:video completion:^(NSNumber *result, NSNumber *liveliness, NSError *error) {
+            [self.activityIndicator stopAnimating];
+            if(error){
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the movie, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles: @"Cancel", nil];
+                [alertView show];
+                
+            }else{
+                if([result floatValue] >= 0.5 && [liveliness floatValue] >= 0.5){
+                    AMBNAppDelegate * delegate = [UIApplication sharedApplication].delegate;
+                    [delegate setBankViewAsRootViewController];
+                    
+                }else{
+                    NSString * message = @"";
+                    if ([result floatValue] >= 0.5) {
+                        message = [NSString stringWithFormat:@"Your face matched to %.0f%%, but it failed the liveliness test", [result floatValue] * 100 ];
+                    }
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Access denied" message:message delegate:self cancelButtonTitle:@"Retry" otherButtonTitles: @"Cancel", nil];
+                    [alertView show];
+                }
+            }
+        }];
+    }
+
+}
+
 - (IBAction)backspaceButtonPressed:(id)sender {
     NSString *currentPin = self.pinTextField.text;
     if(currentPin.length > 0){

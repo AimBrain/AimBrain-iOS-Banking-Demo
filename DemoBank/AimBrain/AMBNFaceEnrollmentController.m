@@ -2,7 +2,7 @@
 
 @interface AMBNFaceEnrollmentController ()
 @property BOOL successAlert;
-@property NSInteger picturesLeft;
+@property NSInteger capturesLeft;
 @property UIViewController *viewController;
 @property (nonatomic, copy) void (^completion)(BOOL success);
 @property NSArray *angleDescriptions;
@@ -23,38 +23,55 @@
     return self;
 }
 
--(void)startForViewController: (UIViewController *) viewController completion:(void (^)(BOOL success))completion {
-    self.viewController = viewController;
+-(void)startMovieEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion {
+    self.capturesLeft = 5;
     self.completion = completion;
-    self.picturesLeft = 5;
-    [self triggerEnrollment];
+    self.viewController = viewController;
+    [self triggerMovieEnrollment];
 }
 
--(void) triggerEnrollment{
-    [[AMBNManager sharedInstance] openFaceImagesCaptureWithTopHint:[self.angleDescriptions objectAtIndex:5 - self.picturesLeft] bottomHint:@"Position your face fully within the outline with eyes between the lines." batchSize:3 delay:0.3 fromViewController:self.viewController completion:^(BOOL success, NSArray *images) {
-     [[AMBNManager sharedInstance] enrollFaceImages:images completion:^(BOOL success, NSNumber *imagesCount, NSError *error) {
-
-         if(success){
-             [self handleSuccess];
-         }else{
-             [self handleFailure:error];
-         }
-
-     }];
+- (void)triggerMovieEnrollment {
+    AMBNFaceRecordingViewController *faceRecordingViewController = [[AMBNManager sharedInstance] instantiateFaceRecordingViewControllerWithTopHint:[self.angleDescriptions objectAtIndex:5 - self.capturesLeft] bottomHint:@"Position your face fully within the outline with eyes between the lines." recordingHint:nil movieLength:2];
+    faceRecordingViewController.delegate = self;
+    [self.viewController presentViewController:faceRecordingViewController animated:YES completion:^{
+        
     }];
 }
 
+-(void)faceRecordingViewController:(AMBNFaceRecordingViewController *)faceRecordingViewController recordingResult:(NSURL *)video error:(NSError *)error {
+    [faceRecordingViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    if (error) {
+        [self handleMovieError:error];
+    } else {
+        [[AMBNManager sharedInstance] enrollFaceMovie:video completion:^(BOOL success, NSError *error) {
+            if (success) {
+                [self handleSuccess];
+            } else {
+                [self handleFailure:error];
+            }
+        }];
+    }
+}
+
+
+-(void)handleMovieError:(NSError *)error {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the video, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles:@"Cancel", nil];
+    [alertView show];
+}
+
 -(void) handleSuccess {
-    self.picturesLeft -= 1;
-    if(self.picturesLeft == 0){
+    self.capturesLeft -= 1;
+    if(self.capturesLeft == 0){
         self.completion(true);
     }else{
-        [self triggerEnrollment];
+        [self triggerMovieEnrollment];
     }
 }
 
 -(void) handleFailure:(NSError *)error {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the picture, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles:@"Cancel", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the video, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles:@"Cancel", nil];
     [alertView show];
     
 }
@@ -62,7 +79,7 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
-            [self triggerEnrollment];
+            [self triggerMovieEnrollment];
             break;
         case 1:
             self.completion(false);

@@ -37,6 +37,7 @@
     self.sessionIdValueLabel.text = [[NSUserDefaults standardUserDefaults] stringForKey:AMBNDemoAppUserSession];
 }
 -(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)updateLastUpdate{

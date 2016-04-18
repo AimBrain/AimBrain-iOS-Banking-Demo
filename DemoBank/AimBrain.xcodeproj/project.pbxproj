@@ -14,10 +14,7 @@
 		0C5F902F1C2862F40005C6F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F902E1C2862F40005C6F9 /* Launch Screen.storyboard */; };
 		0C683F141C564EBE00514BC0 /* AMBNInterfaceUUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C683F131C564EBE00514BC0 /* AMBNInterfaceUUIDGenerator.m */; };
 		0C683F171C58E5A500514BC0 /* AMBNEmailVerifiacationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C683F161C58E5A500514BC0 /* AMBNEmailVerifiacationViewController.m */; };
-		0C776AA81C5FE358009BFDFD /* libAimBrainSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C776A9F1C5FE358009BFDFD /* libAimBrainSDK.a */; };
-		0C776AAA1C5FE77D009BFDFD /* libAimBrainSDKsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C776AA91C5FE77D009BFDFD /* libAimBrainSDKsim.a */; };
 		0C78CE6E1C4B1A6F0058E217 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C78CE6D1C4B1A6F0058E217 /* Localizable.strings */; };
-		0C7991361C9B49B000E47512 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C7991351C9B49B000E47512 /* face.bundle */; };
 		0C79913A1C9B5C9300E47512 /* AMBNFaceEnrollmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7991391C9B5C9300E47512 /* AMBNFaceEnrollmentController.m */; };
 		0C9262501C5141E100F39D0E /* AMBNTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C92624F1C5141E100F39D0E /* AMBNTransactionsViewController.m */; };
 		0CA754361C31874F00958309 /* AMBNRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA754351C31874F00958309 /* AMBNRegistrationViewController.m */; };
@@ -37,6 +34,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D54625FB1CBFE074007F15B0 /* AimBrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */; };
+		D54625FD1CBFE07C007F15B0 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D54625FC1CBFE07C007F15B0 /* face.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,24 +62,7 @@
 		0C683F131C564EBE00514BC0 /* AMBNInterfaceUUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNInterfaceUUIDGenerator.m; sourceTree = "<group>"; };
 		0C683F151C58E5A500514BC0 /* AMBNEmailVerifiacationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNEmailVerifiacationViewController.h; sourceTree = "<group>"; };
 		0C683F161C58E5A500514BC0 /* AMBNEmailVerifiacationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNEmailVerifiacationViewController.m; sourceTree = "<group>"; };
-		0C776A961C5FE358009BFDFD /* AimBrainSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimBrainSDK.h; sourceTree = "<group>"; };
-		0C776A971C5FE358009BFDFD /* AMBNCapturingApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNCapturingApplication.h; sourceTree = "<group>"; };
-		0C776A981C5FE358009BFDFD /* AMBNCapturingApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNCapturingApplicationDelegate.h; sourceTree = "<group>"; };
-		0C776A991C5FE358009BFDFD /* AMBNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNManager.h; sourceTree = "<group>"; };
-		0C776A9A1C5FE358009BFDFD /* AMBNPrivacyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNPrivacyGuard.h; sourceTree = "<group>"; };
-		0C776A9B1C5FE358009BFDFD /* AMBNResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNResult.h; sourceTree = "<group>"; };
-		0C776A9C1C5FE358009BFDFD /* AMBNTextInputCollectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNTextInputCollectorDelegate.h; sourceTree = "<group>"; };
-		0C776A9D1C5FE358009BFDFD /* AMBNTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNTouch.h; sourceTree = "<group>"; };
-		0C776A9E1C5FE358009BFDFD /* AMBNTouchCollectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNTouchCollectorDelegate.h; sourceTree = "<group>"; };
-		0C776A9F1C5FE358009BFDFD /* libAimBrainSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAimBrainSDK.a; sourceTree = "<group>"; };
-		0C776AA31C5FE358009BFDFD /* AimBrainSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimBrainSDK.h; sourceTree = "<group>"; };
-		0C776AA41C5FE358009BFDFD /* AMBNCapturingApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNCapturingApplication.h; sourceTree = "<group>"; };
-		0C776AA51C5FE358009BFDFD /* AMBNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNManager.h; sourceTree = "<group>"; };
-		0C776AA61C5FE358009BFDFD /* AMBNPrivacyGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNPrivacyGuard.h; sourceTree = "<group>"; };
-		0C776AA71C5FE358009BFDFD /* AMBNResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNResult.h; sourceTree = "<group>"; };
-		0C776AA91C5FE77D009BFDFD /* libAimBrainSDKsim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAimBrainSDKsim.a; path = SDK/libAimBrainSDKsim.a; sourceTree = "<group>"; };
 		0C78CE6D1C4B1A6F0058E217 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		0C7991351C9B49B000E47512 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
 		0C7991381C9B5C9300E47512 /* AMBNFaceEnrollmentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNFaceEnrollmentController.h; sourceTree = "<group>"; };
 		0C7991391C9B5C9300E47512 /* AMBNFaceEnrollmentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNFaceEnrollmentController.m; sourceTree = "<group>"; };
 		0C92624E1C5141E100F39D0E /* AMBNTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNTransactionsViewController.h; sourceTree = "<group>"; };
@@ -91,7 +73,6 @@
 		0CA754381C318E9100958309 /* AMBNSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNSignInViewController.m; sourceTree = "<group>"; };
 		0CA7543A1C318F6D00958309 /* AMBNBankMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNBankMenuViewController.h; sourceTree = "<group>"; };
 		0CA7543B1C318F6D00958309 /* AMBNBankMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNBankMenuViewController.m; sourceTree = "<group>"; };
-		0CC5BCC41C7336CB008EC7F6 /* AMBNTextEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNTextEvent.h; sourceTree = "<group>"; };
 		0CD29A801C5C123000732947 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImage.xcassets; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* AimBrain Banking Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AimBrain Banking Authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +93,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBA3DCD95BBE150DB516F111 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DECD3302982E022A7563D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AimBrainSDK.framework; sourceTree = "<group>"; };
+		D54625FC1CBFE07C007F15B0 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
 		F7935325B7E0E4195B3417E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,11 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C776AAA1C5FE77D009BFDFD /* libAimBrainSDKsim.a in Frameworks */,
-				0C776AA81C5FE358009BFDFD /* libAimBrainSDK.a in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				D54625FB1CBFE074007F15B0 /* AimBrainSDK.framework in Frameworks */,
 				5B623367377A083F3B10820C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,70 +141,6 @@
 			name = interfaceUUID;
 			sourceTree = "<group>";
 		};
-		0C776A931C5FE358009BFDFD /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				0C7991351C9B49B000E47512 /* face.bundle */,
-				0C776A941C5FE358009BFDFD /* include */,
-				0C776A9F1C5FE358009BFDFD /* libAimBrainSDK.a */,
-				0C776AA01C5FE358009BFDFD /* usr */,
-			);
-			path = SDK;
-			sourceTree = "<group>";
-		};
-		0C776A941C5FE358009BFDFD /* include */ = {
-			isa = PBXGroup;
-			children = (
-				0C776A951C5FE358009BFDFD /* AimBrainSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		0C776A951C5FE358009BFDFD /* AimBrainSDK */ = {
-			isa = PBXGroup;
-			children = (
-				0CC5BCC41C7336CB008EC7F6 /* AMBNTextEvent.h */,
-				0C776A961C5FE358009BFDFD /* AimBrainSDK.h */,
-				0C776A971C5FE358009BFDFD /* AMBNCapturingApplication.h */,
-				0C776A981C5FE358009BFDFD /* AMBNCapturingApplicationDelegate.h */,
-				0C776A991C5FE358009BFDFD /* AMBNManager.h */,
-				0C776A9A1C5FE358009BFDFD /* AMBNPrivacyGuard.h */,
-				0C776A9B1C5FE358009BFDFD /* AMBNResult.h */,
-				0C776A9C1C5FE358009BFDFD /* AMBNTextInputCollectorDelegate.h */,
-				0C776A9D1C5FE358009BFDFD /* AMBNTouch.h */,
-				0C776A9E1C5FE358009BFDFD /* AMBNTouchCollectorDelegate.h */,
-			);
-			path = AimBrainSDK;
-			sourceTree = "<group>";
-		};
-		0C776AA01C5FE358009BFDFD /* usr */ = {
-			isa = PBXGroup;
-			children = (
-				0C776AA11C5FE358009BFDFD /* local */,
-			);
-			path = usr;
-			sourceTree = "<group>";
-		};
-		0C776AA11C5FE358009BFDFD /* local */ = {
-			isa = PBXGroup;
-			children = (
-				0C776AA21C5FE358009BFDFD /* include */,
-			);
-			path = local;
-			sourceTree = "<group>";
-		};
-		0C776AA21C5FE358009BFDFD /* include */ = {
-			isa = PBXGroup;
-			children = (
-				0C776AA31C5FE358009BFDFD /* AimBrainSDK.h */,
-				0C776AA41C5FE358009BFDFD /* AMBNCapturingApplication.h */,
-				0C776AA51C5FE358009BFDFD /* AMBNManager.h */,
-				0C776AA61C5FE358009BFDFD /* AMBNPrivacyGuard.h */,
-				0C776AA71C5FE358009BFDFD /* AMBNResult.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 		0C7991371C9B5C5500E47512 /* Enrollment */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +153,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				0C776A931C5FE358009BFDFD /* SDK */,
+				D54625FC1CBFE07C007F15B0 /* face.bundle */,
 				6003F593195388D20070C39A /* DemoBank */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -256,7 +174,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C776AA91C5FE77D009BFDFD /* libAimBrainSDKsim.a */,
+				D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -426,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7991361C9B49B000E47512 /* face.bundle in Resources */,
+				D54625FD1CBFE07C007F15B0 /* face.bundle in Resources */,
 				0C78CE6E1C4B1A6F0058E217 /* Localizable.strings in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				0CD29A811C5C123000732947 /* LaunchImage.xcassets in Resources */,
@@ -691,6 +609,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -715,6 +634,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.demobank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WARNING_CFLAGS = "-Wpartial-availability";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -727,6 +648,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -751,6 +673,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.demobank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WARNING_CFLAGS = "-Wpartial-availability";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

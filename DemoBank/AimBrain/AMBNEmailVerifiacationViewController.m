@@ -10,6 +10,7 @@
 
 @implementation AMBNEmailVerifiacationViewController
 -(void)viewDidLoad{
+    [super viewDidLoad];
     //    self.retryTimer = [NSTimer scheduledTimerWithTimeInterval:<#(NSTimeInterval)#> invocation:<#(nonnull NSInvocation *)#> repeats:<#(BOOL)#>]
     [self tryLogin];
     self.cancelled = false;

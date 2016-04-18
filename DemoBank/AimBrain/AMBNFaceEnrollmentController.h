@@ -3,7 +3,6 @@
 #import <AimBrainSDK/AimBrainSDK.h>
 
 
-@interface AMBNFaceEnrollmentController : NSObject  <UIAlertViewDelegate>
-
--(void)startForViewController: (UIViewController *) viewController completion:(void (^)(BOOL success))completion;
+@interface AMBNFaceEnrollmentController : NSObject  <UIAlertViewDelegate, AMBNFaceRecordingViewControllerDelegate>
+-(void)startMovieEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion;
 @end

@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
+#import <AimBrainSDK/AimBrainSDK.h>
 
-@interface AMBNSignInViewController : UIViewController <UIAlertViewDelegate>
+@interface AMBNSignInViewController : UIViewController <UIAlertViewDelegate, AMBNFaceRecordingViewControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *pinTextField;

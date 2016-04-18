@@ -4,7 +4,7 @@ use_frameworks!
 pod 'Fabric'
 pod 'Crashlytics'
 
-target 'AimBrain Banking Demo', :exclusive => true do
+target 'AimBrain Banking Authentication', :exclusive => true do
 end
 
 target 'AimBrain_Tests', :exclusive => true do
