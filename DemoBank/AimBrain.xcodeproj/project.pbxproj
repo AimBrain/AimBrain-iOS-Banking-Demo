@@ -34,8 +34,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D54625FB1CBFE074007F15B0 /* AimBrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */; };
-		D54625FD1CBFE07C007F15B0 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D54625FC1CBFE07C007F15B0 /* face.bundle */; };
+		D543B0B61CC62BDB00E4E4F3 /* AimBrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D543B0B51CC62BDB00E4E4F3 /* AimBrainSDK.framework */; };
+		D543B0B81CC62BEC00E4E4F3 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D543B0B71CC62BEC00E4E4F3 /* face.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBA3DCD95BBE150DB516F111 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DECD3302982E022A7563D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AimBrainSDK.framework; sourceTree = "<group>"; };
-		D54625FC1CBFE07C007F15B0 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
+		D543B0B51CC62BDB00E4E4F3 /* AimBrainSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AimBrainSDK.framework; sourceTree = "<group>"; };
+		D543B0B71CC62BEC00E4E4F3 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
 		F7935325B7E0E4195B3417E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D54625FB1CBFE074007F15B0 /* AimBrainSDK.framework in Frameworks */,
+				D543B0B61CC62BDB00E4E4F3 /* AimBrainSDK.framework in Frameworks */,
 				5B623367377A083F3B10820C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,7 +153,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				D54625FC1CBFE07C007F15B0 /* face.bundle */,
+				D543B0B71CC62BEC00E4E4F3 /* face.bundle */,
 				6003F593195388D20070C39A /* DemoBank */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -174,7 +174,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D54625FA1CBFE074007F15B0 /* AimBrainSDK.framework */,
+				D543B0B51CC62BDB00E4E4F3 /* AimBrainSDK.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -344,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54625FD1CBFE07C007F15B0 /* face.bundle in Resources */,
+				D543B0B81CC62BEC00E4E4F3 /* face.bundle in Resources */,
 				0C78CE6E1C4B1A6F0058E217 /* Localizable.strings in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				0CD29A811C5C123000732947 /* LaunchImage.xcassets in Resources */,

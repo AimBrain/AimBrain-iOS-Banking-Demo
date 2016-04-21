@@ -10,15 +10,15 @@
 
 @interface AMBNServer : NSObject
 
-- (instancetype) initWithAppId: (NSString *) appId secret: (NSString *) secret;
+- (instancetype) initWithApiKey: (NSString *) apiKey secret: (NSString *) secret;
 
 - (void) createSessionWithUserId: (NSString *)userId completion: (void (^)(NSString * session, NSNumber * face, NSNumber * behaviour, NSError * error))completion;
 
 - (void) submitTouches: (NSArray *) touches accelerations: (NSArray *) accelerations textEvents: (NSArray *) textEvents session: (NSString *) session completion: (void (^)(AMBNResult * result, NSError * error))completion ;
-- (void) getScoreForSession: (NSString *) session completion: (void (^)(AMBNResult * score, NSError * error))completion;
+- (void) getScoreForSession: (NSString *) session completion: (void (^)(AMBNResult * result, NSError * error))completion;
 
 - (void) enrollFace: (NSArray *) dataToEnroll session: (NSString*) session completion: (void (^)(BOOL success, NSNumber * imagesCount, NSError * error))completion;
-- (void) authFace: (NSArray *) dataToAuth session: (NSString*) session completion: (void (^)(NSNumber * result, NSNumber * liveliness, NSError * error))completion;
+- (void) authFace: (NSArray *) dataToAuth session: (NSString*) session completion: (void (^)(NSNumber * score, NSNumber * liveliness, NSError * error))completion;
 - (void) compareFaceImages: (NSArray *) firstFaceImages withFaceImages: (NSArray *) secondFaceImages completion: (void (^)(NSNumber * smilarity, NSNumber * firstLiveliness, NSNumber * secondLiveliness, NSError * error))completion;
 
 @end

@@ -109,7 +109,7 @@
             }
             case 1:
             {
-                [self startFaceAuthenticationWithMovie];
+                [self startFaceAuthenticationWithVideo];
                 break;
             }
             case 2:
@@ -140,11 +140,11 @@
 
 }
 
--(void) startFaceAuthenticationWithMovie{
+-(void) startFaceAuthenticationWithVideo{
     [self.activityIndicator startAnimating];
     AMBNFaceRecordingViewController *faceRecordingViewController = [[AMBNManager sharedInstance] instantiateFaceRecordingViewControllerWithTopHint:@"To authenticate please face the camera directly, press 'camera' button and blink" bottomHint:@"Position your face fully within the outline with eyes between the lines."
                       recordingHint:@"Please BLINK now..."
-                        movieLength:2];
+                        videoLength:2];
     faceRecordingViewController.delegate = self;
     [self presentViewController:faceRecordingViewController animated:YES completion:^{
         
@@ -162,7 +162,7 @@
             {
                 [self.activityIndicator startAnimating];
                 self.faceEnrollmentController = [[AMBNFaceEnrollmentController alloc] init];
-                [self.faceEnrollmentController startMovieEnrollmentForViewController:self completion:^(BOOL success) {
+                [self.faceEnrollmentController startVideoEnrollmentForViewController:self completion:^(BOOL success) {
                     if(success){
                         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Enrollment finished successfully" delegate:nil cancelButtonTitle:@"Ok"otherButtonTitles:nil];
                         [alertView show];
@@ -179,7 +179,7 @@
         switch (buttonIndex) {
             case 0:
             {
-                [self startFaceAuthenticationWithMovie];
+                [self startFaceAuthenticationWithVideo];
                 break;
             }
             case 1:
@@ -202,21 +202,21 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
     } else {
-        [[AMBNManager sharedInstance] authenticateFaceMovie:video completion:^(NSNumber *result, NSNumber *liveliness, NSError *error) {
+        [[AMBNManager sharedInstance] authenticateFaceVideo:video completion:^(NSNumber *score, NSNumber *liveliness, NSError *error) {
             [self.activityIndicator stopAnimating];
             if(error){
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the movie, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles: @"Cancel", nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the video, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles: @"Cancel", nil];
                 [alertView show];
                 
             }else{
-                if([result floatValue] >= 0.5 && [liveliness floatValue] >= 0.5){
+                if([score floatValue] >= 0.5 && [liveliness floatValue] >= 0.5){
                     AMBNAppDelegate * delegate = [UIApplication sharedApplication].delegate;
                     [delegate setBankViewAsRootViewController];
                     
                 }else{
                     NSString * message = @"";
-                    if ([result floatValue] >= 0.5) {
-                        message = [NSString stringWithFormat:@"Your face matched to %.0f%%, but it failed the liveliness test", [result floatValue] * 100 ];
+                    if ([score floatValue] >= 0.5) {
+                        message = [NSString stringWithFormat:@"Your face matched to %.0f%%, but it failed the liveliness test", [score floatValue] * 100 ];
                     }
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Access denied" message:message delegate:self cancelButtonTitle:@"Retry" otherButtonTitles: @"Cancel", nil];
                     [alertView show];

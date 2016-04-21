@@ -4,5 +4,5 @@
 
 
 @interface AMBNFaceEnrollmentController : NSObject  <UIAlertViewDelegate, AMBNFaceRecordingViewControllerDelegate>
--(void)startMovieEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion;
+-(void)startVideoEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion;
 @end

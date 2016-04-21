@@ -23,15 +23,15 @@
     return self;
 }
 
--(void)startMovieEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion {
+-(void)startVideoEnrollmentForViewController:(UIViewController *)viewController completion:(void (^)(BOOL))completion {
     self.capturesLeft = 5;
     self.completion = completion;
     self.viewController = viewController;
-    [self triggerMovieEnrollment];
+    [self triggerVideoEnrollment];
 }
 
-- (void)triggerMovieEnrollment {
-    AMBNFaceRecordingViewController *faceRecordingViewController = [[AMBNManager sharedInstance] instantiateFaceRecordingViewControllerWithTopHint:[self.angleDescriptions objectAtIndex:5 - self.capturesLeft] bottomHint:@"Position your face fully within the outline with eyes between the lines." recordingHint:nil movieLength:2];
+- (void)triggerVideoEnrollment {
+    AMBNFaceRecordingViewController *faceRecordingViewController = [[AMBNManager sharedInstance] instantiateFaceRecordingViewControllerWithTopHint:[self.angleDescriptions objectAtIndex:5 - self.capturesLeft] bottomHint:@"Position your face fully within the outline with eyes between the lines." recordingHint:nil videoLength:2];
     faceRecordingViewController.delegate = self;
     [self.viewController presentViewController:faceRecordingViewController animated:YES completion:^{
         
@@ -43,9 +43,9 @@
         
     }];
     if (error) {
-        [self handleMovieError:error];
+        [self handleVideoError:error];
     } else {
-        [[AMBNManager sharedInstance] enrollFaceMovie:video completion:^(BOOL success, NSError *error) {
+        [[AMBNManager sharedInstance] enrollFaceVideo:video completion:^(BOOL success, NSError *error) {
             if (success) {
                 [self handleSuccess];
             } else {
@@ -56,7 +56,7 @@
 }
 
 
--(void)handleMovieError:(NSError *)error {
+-(void)handleVideoError:(NSError *)error {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Please re-take the video, reason: %@", error.localizedDescription ] delegate:self cancelButtonTitle:@"OK"otherButtonTitles:@"Cancel", nil];
     [alertView show];
 }
@@ -66,7 +66,7 @@
     if(self.capturesLeft == 0){
         self.completion(true);
     }else{
-        [self triggerMovieEnrollment];
+        [self triggerVideoEnrollment];
     }
 }
 
@@ -79,7 +79,7 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
-            [self triggerMovieEnrollment];
+            [self triggerVideoEnrollment];
             break;
         case 1:
             self.completion(false);

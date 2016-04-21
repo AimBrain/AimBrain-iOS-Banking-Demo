@@ -24,7 +24,7 @@
 @property (readonly) BOOL started;
 
 /*!
- @discussion Session must be set before submitting behavioural data. Instead of setting this propery you can also obtain session using @link configureWithApplicationId:secret: @/link
+ @discussion Session must be set before submitting behavioural data. Instead of setting this propery you can also obtain session using @link configureWithApiKey:secret: @/link
  */
 @property NSString * session;
 
@@ -41,10 +41,10 @@
 
 /*!
  @description Configures AMBNManager. This method must be called before creating user session or submitting behavioural data.
- @param appId Provided application identifier.
+ @param apiKey Provided application identifier.
  @param appSecret Provided application secret.
  */
-- (void) configureWithApplicationId: (NSString *) appId secret: (NSString *) appSecret;
+- (void) configureWithApiKey: (NSString *) apiKey secret: (NSString *) appSecret;
 
 /*!
  @description Creates session key and sets session property of this class.
@@ -117,17 +117,17 @@
 /*!
  @description Authenticates face images.
  @param images array of face images to authenticate
- @param completion called when authentication is completed. <b> result </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the image batch where 1 is maximum liveliness.
+ @param completion called when authentication is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the image batch where 1 is maximum liveliness.
  */
-- (void) authenticateFaceImages:(NSArray *)images completion: (void (^)(NSNumber * result, NSNumber * liveliness, NSError * error))completion;
+- (void) authenticateFaceImages:(NSArray *)images completion: (void (^)(NSNumber * score, NSNumber * liveliness, NSError * error))completion;
 
 /*!
  @description Compares faces
  @param firstFaceImages array of first face images to compare
  @param secondFaceImages array of second face images to compare
- @param completion called when comparing is completed. <b> result </b> is floating point number from 0 to 1 where 1 is maximum similarity. <b> firstLiveliness </b> is liveliness of the first photo array. <b> secondLiveliness </b> is liveliness of the second photo array
+ @param completion called when comparing is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity. <b> firstLiveliness </b> is liveliness of the first photo array. <b> secondLiveliness </b> is liveliness of the second photo array
  */
-- (void) compareFaceImages:(NSArray *) firstFaceImages toFaceImages:(NSArray *) secondFaceImages completion: (void (^)(NSNumber * result, NSNumber * firstLiveliness, NSNumber * secondLiveliness, NSError * error))completion;
+- (void) compareFaceImages:(NSArray *) firstFaceImages toFaceImages:(NSArray *) secondFaceImages completion: (void (^)(NSNumber * score, NSNumber * firstLiveliness, NSNumber * secondLiveliness, NSError * error))completion;
 
 /*!
  @description Opens view controller used to capture and crop face images
@@ -140,35 +140,35 @@
 - (void) openFaceImagesCaptureWithTopHint: (NSString *) topHint bottomHint:(NSString *) bottomHint batchSize: (NSInteger) batchSize delay: (NSTimeInterval) delay fromViewController: (UIViewController *) viewController completion: (void (^)(NSArray * images, NSError * error))completion;
 
 /*!
- @description Returns view controller used to capture face movie
- @param movieLength length of recorded movie
+ @description Returns view controller used to capture face video
+ @param videoLength length of recorded video
  */
-- (AMBNFaceRecordingViewController *) instantiateFaceRecordingViewControllerWithMovieLength:(NSTimeInterval)movieLength;
+- (AMBNFaceRecordingViewController *) instantiateFaceRecordingViewControllerWithVideoLength:(NSTimeInterval)videoLength;
 
 /*!
- @description Returns view controller used to capture face movie
- @param topHint top hint displayed on movie capture view
- @param bottomHint bottom hint displayed on movie capture view
+ @description Returns view controller used to capture face video
+ @param topHint top hint displayed on video capture view
+ @param bottomHint bottom hint displayed on video capture view
  @param recordingHint bottom hint displayed while recording
- @param movieLength length of recorded movie
+ @param videoLength length of recorded video
  */
 - (AMBNFaceRecordingViewController *) instantiateFaceRecordingViewControllerWithTopHint:(NSString *)topHint
                                                                              bottomHint:(NSString *)bottomHint
                                                                           recordingHint:(NSString *)recordingHint
-                                                                            movieLength:(NSTimeInterval)movieLength;
+                                                                            videoLength:(NSTimeInterval)videoLength;
 
 /*!
- @description Enrolls face movies.
- @param movie url of face movie to enroll
+ @description Enrolls face videos.
+ @param video url of face video to enroll
  @param completion called when enrollement is completed. <b> Success </b> is true when enrollment was successful.
  */
-- (void)enrollFaceMovie:(NSURL *)movie completion:(void (^)(BOOL success, NSError * error))completion;
+- (void)enrollFaceVideo:(NSURL *)video completion:(void (^)(BOOL success, NSError * error))completion;
 
 /*!
- @description Authenticates face movie.
- @param movie url of face movie to authenticate
- @param completion called when authentication is completed. <b> result </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the movie where 1 is maximum liveliness.
+ @description Authenticates face video.
+ @param video url of face video to authenticate
+ @param completion called when authentication is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the video where 1 is maximum liveliness.
  */
-- (void)authenticateFaceMovie:(NSURL *)movie completion: (void (^)(NSNumber * result, NSNumber * liveliness, NSError * error))completion;
+- (void)authenticateFaceVideo:(NSURL *)video completion: (void (^)(NSNumber * score, NSNumber * liveliness, NSError * error))completion;
 
 @end
