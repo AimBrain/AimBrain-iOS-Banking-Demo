@@ -1,11 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+project 'AimBrain Demo.xcodeproj'
+
 pod 'Fabric'
 pod 'Crashlytics'
 
-target 'AimBrain Banking Authentication', :exclusive => true do
+target 'AimBrain Demo Banking Authentication' do
 end
 
-target 'AimBrain_Tests', :exclusive => true do
+target 'AimBrain Demo_Tests' do
 end

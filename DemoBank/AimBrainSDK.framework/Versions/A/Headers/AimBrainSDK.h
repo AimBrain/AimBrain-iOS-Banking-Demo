@@ -4,6 +4,7 @@
 #import "AMBNResult.h"
 #import "AMBNManager.h"
 #import "AMBNPrivacyGuard.h"
+#import "AMBNVoiceRecordingViewControllerDelegate.h"
 
 
 @interface AimBrainSDK : NSObject

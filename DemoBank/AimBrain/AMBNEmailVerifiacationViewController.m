@@ -9,16 +9,15 @@
 @end
 
 @implementation AMBNEmailVerifiacationViewController
+
 -(void)viewDidLoad{
     [super viewDidLoad];
-    //    self.retryTimer = [NSTimer scheduledTimerWithTimeInterval:<#(NSTimeInterval)#> invocation:<#(nonnull NSInvocation *)#> repeats:<#(BOOL)#>]
     [self tryLogin];
     self.cancelled = false;
 }
 
 
 - (void) tryLogin {
-    
     [[AMBNDemoServer sharedInstance] login:self.loginURL completion:^( NSString * userId, NSString * pin, NSError *error) {
         if(!self.cancelled){
             if (error) {
@@ -33,9 +32,9 @@
                 } completion:^(BOOL finished) {
                     self.errorLabel.hidden = false;
                 }];
-            }else{
+            }
+            else {
                 NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-                
                 [defaults setValue:pin forKey:AMBNDemoAppUserPinKey];
                 [defaults setValue:userId forKey:AMBNDemoAppUserId];
                 [defaults synchronize];
@@ -44,16 +43,12 @@
                 
             }
         }
-        
     }];
-    
 }
 
 - (IBAction)useDifferentEmailPressed:(id)sender {
     self.cancelled = true;
     [self.navigationController popViewControllerAnimated:true];
-    
-    
 }
 
 @end

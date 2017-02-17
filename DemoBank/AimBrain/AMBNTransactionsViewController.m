@@ -3,14 +3,14 @@
 
 @implementation AMBNTransactionsViewController
 
--(void)viewDidLoad{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [[AMBNManager sharedInstance] registerView:self.view withId:@"transactions-vc"];
 }
--(void)viewWillAppear:(BOOL)animated{
+
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    [[AMBNManager sharedInstance] submitBehaviouralDataWithCompletion:^(AMBNResult *result, NSError *error) {
-        
-    }];
+    [[AMBNManager sharedInstance] submitBehaviouralDataWithCompletionHandler:^(AMBNBehaviouralResult *result, NSError *error) {}];
 }
+
 @end

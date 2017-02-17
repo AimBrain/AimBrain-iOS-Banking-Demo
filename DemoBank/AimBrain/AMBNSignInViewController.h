@@ -1,8 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <AimBrainSDK/AimBrainSDK.h>
 
-@interface AMBNSignInViewController : UIViewController <UIAlertViewDelegate, AMBNFaceRecordingViewControllerDelegate>
-
+@interface AMBNSignInViewController : UIViewController <UIAlertViewDelegate, AMBNFaceRecordingViewControllerDelegate, AMBNVoiceRecordingViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *pinTextField;
 @property (weak, nonatomic) IBOutlet UIButton *oneButton;
@@ -18,10 +17,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 @property (weak, nonatomic) IBOutlet UIButton *backSpaceButton;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
-
+@property (weak, nonatomic) IBOutlet UIButton *authButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pinLabel;
 
 @property NSString * pin;
+
+- (void)hideProcessingProgress;
+- (void)showProcessingProgress;
 @end

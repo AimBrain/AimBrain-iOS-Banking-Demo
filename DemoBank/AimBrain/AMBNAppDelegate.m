@@ -17,9 +17,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
 
-    [[AMBNManager sharedInstance] configureWithApiKey:@"AIMBRAIN_API_KEY" secret:@"AIMBRAIN_API_SECRET"];
-    [[AMBNManager sharedInstance] start];
+     [[AMBNManager sharedInstance] configureWithApiKey:@"AIMBRAIN_API_KEY" secret:@"AIMBRAIN_API_SECRET" baseUrl:@"https://api.aimbrain.com:443/v1/"];
 
+    [[AMBNManager sharedInstance] start];
 
     NSData * sensitiveSalt = [self getSalt];
     [[AMBNManager sharedInstance] setSensitiveSalt:sensitiveSalt];
@@ -34,10 +34,9 @@
 
     return YES;
 }
--(void) submitBehaviouralData {
-    [[AMBNManager sharedInstance] submitBehaviouralDataWithCompletion:^(AMBNResult *result, NSError *error) {
 
-    }];
+-(void) submitBehaviouralData {
+    [[AMBNManager sharedInstance] submitBehaviouralDataWithCompletionHandler:^(AMBNBehaviouralResult *result, NSError *error) {}];
 }
 
 - (NSData *) getSalt{
@@ -55,8 +54,7 @@
 
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
+- (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
