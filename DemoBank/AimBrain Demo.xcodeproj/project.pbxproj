@@ -351,7 +351,7 @@
 			attributes = {
 				CLASSPREFIX = AMBN;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Paweł Kupiec";
+				ORGANIZATIONNAME = "AimBrain Solutions";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 99P84848J9;
