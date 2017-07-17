@@ -6,7 +6,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *faceOval;
 @property (nonatomic, weak) id <AMBNCameraOverlayDelegate> delegate;
-@property UIImagePickerController *imagePicker;
+@property (nonatomic, weak) UIImagePickerController *imagePicker;
 @property int toCapture;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;

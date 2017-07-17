@@ -37,43 +37,24 @@
 
 - (AMBNSerializedRequest *)serializeAuthFace:(NSArray *)dataToAuth session:(NSString *)session metadata:(NSData *)metadata;
 
-- (void)authFace:(NSArray *)dataToAuth userId:(NSString *)userId metadata:(NSData *)metadata completion:(void (^)(AMBNAuthenticateResult *result, NSError *error))completion;
-
 - (void)compareFaceImages:(NSArray *)firstFaceImages withFaceImages:(NSArray *)secondFaceImages metadata:(NSData *)metadata completion:(void (^)(AMBNCompareFaceResult *result, NSError *error))completion;
 
 - (AMBNSerializedRequest *)serializeCompareFaceImages:(NSArray *)firstFaceImages withFaceImages:(NSArray *)secondFaceImages metadata:(NSData *)metadata;
-
-- (AMBNSerializedRequest *)serializeAuthFace:(NSArray *)dataToAuth userId:(NSString *)userId metadata:(NSData *)metadata;
 
 - (void)enrollFace:(NSArray *)dataToEnroll session:(NSString *)session metadata:(NSData *)metadata completion:(void (^)(AMBNEnrollFaceResult *result, NSError *error))completion;
 
 - (AMBNSerializedRequest *)serializeEnrollFace:(NSArray *)dataToEnroll session:(NSString *)session metadata:(NSData *)metadata;
 
-- (void)enrollFace:(NSArray *)dataToEnroll userId:(NSString *)userId metadata:(NSData *)metadata completion:(void (^)(AMBNEnrollFaceResult *result, NSError *error))completion;
-
-- (AMBNSerializedRequest *)serializeEnrollFace:(NSArray *)dataToEnroll userId:(NSString *)userId metadata:(NSData *)metadata;
-
 - (void)enrollVoice: (NSString*) dataToEnroll session: (NSString*) session metadata:(NSData *)metadata completion:(void (^)(AMBNEnrollVoiceResult *, NSError *))completion;
 
 - (AMBNSerializedRequest *)serializeEnrollVoice:(NSString *)dataToEnroll session:(NSString *)session metadata:(NSData *)metadata;
-
-- (void)enrollVoice:(NSString *)dataToEnroll userId:(NSString *)userId metadata:(NSData *)metadata completion:(void (^)(AMBNEnrollVoiceResult *result, NSError *error))completion;
-
-- (AMBNSerializedRequest *)serializeEnrollVoice:(NSString *)dataToEnroll userId:(NSString *)userId metadata:(NSData *)metadata;
 
 - (void)authVoice:(NSString *)dataToAuth session:(NSString *)session metadata:(NSData *)metadata completion:(void (^)(AMBNAuthenticateResult *result, NSError *error))completion;
 
 - (AMBNSerializedRequest *)serializeAuthVoice:(NSString *)dataToAuth session:(NSString *)session metadata:(NSData *)metadata;
 
-- (void)authVoice:(NSString *)dataToAuth userId:(NSString *)userId metadata:(NSData *)metadata completion:(void (^)(AMBNAuthenticateResult *result, NSError *error))completion;
-
-- (AMBNSerializedRequest *)serializeAuthVoice:(NSString *)dataToAuth userId:(NSString *)userId metadata:(NSData *)metadata;
-
 - (void)getVoiceTokenForSession:(NSString *)session type:(NSString *)type metadata:(NSData *)metadata completion:(void (^)(AMBNVoiceTextResult *result, NSError *error))completion;
 
 - (AMBNSerializedRequest *)serializeGetVoiceTokenForSession:(NSString *)session type:(NSString *)type metadata:(NSData *)metadata;
 
-- (void)getVoiceTokenWithUserId:(NSString *)userId type:(NSString *)type metadata:(NSData *)metadata completion:(void (^)(AMBNVoiceTextResult *result, NSError *error))completion;
-
-- (AMBNSerializedRequest *)serializeGetVoiceTokenWithUserId:(NSString *)userId type:(NSString *)type metadata:(NSData *)metadata;
 @end

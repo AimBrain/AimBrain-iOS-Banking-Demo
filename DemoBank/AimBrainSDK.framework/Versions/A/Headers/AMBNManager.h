@@ -5,6 +5,7 @@
 #import "AMBNTouchCollectorDelegate.h"
 #import "AMBNFaceRecordingViewController.h"
 #import "AMBNResult.h"
+#import "AMBNLogConstants.h"
 
 @class AMBNSessionCreateResult;
 @class AMBNBehaviouralResult;
@@ -30,6 +31,11 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
     AMBNVoiceTokenTypeAuth = 100
 };
 
+/**
+ Value for unlimited memory usage.
+ */
+static const NSInteger kAMBNMemoryUsageUnlimited = 0;
+
 /*!
  @class AMBNManager
  @discussion AMBNManager provides centralized interface for collecting behavioural data and communicating with AimBrain API
@@ -47,10 +53,42 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
 @property NSString *session;
 
 /*!
+ @discussion Maximum allowed memory in kilobytes for event collection. Default value is `kAMBNMemoryUsageUnlimited`
+ */
+@property (nonatomic, assign) NSInteger memoryUsageLimitKB;
+
+/*!
  @description Use this method to get AMBNManager singleton.
  @return AMBNManager singleton.
  */
 + (instancetype)sharedInstance;
+
+#pragma mark - logging
+
+/**
+ Enables or disabled logging.
+ Default is enabled. Console messages depend on set LogLevel.
+ 
+ @param isEnabled If "YES", console logging is enabled.
+ */
++ (void)setLoggingEnabled:(BOOL)isEnabled;
+
+/**
+ Sets log level.
+ Default is "AMBNLogLevelWarn".
+ If Logging is disabled, will ignore level setting.
+ 
+ @param level The desired "AMBNLogLevel" log level.
+ */
++ (void)setLogLevel:(AMBNLogLevel)level;
+
+/**
+ Returns the desired "AMBNLogLevel".
+ If Logging is disabled, will ignore level setting.
+ 
+ @return log level.
+ */
++ (AMBNLogLevel)logLevel;
 
 /*!
  @description Starts behavioural data collection.
@@ -345,24 +383,6 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
 - (AMBNSerializedRequest *)getSerializedEnrollFaceVideo:(NSURL *)video metadata:(NSData *)metadata;
 
 /*!
- @description Enrolls face videos without active session created.
- @param video url of face video to enroll
- @param userId enrolled user id
- @param metadata metadata to be sent with request
- @param completion called when enrollement is completed. <b> result </b> is no nil when enrollment was successful.
- */
-- (void)enrollFaceVideoWithUserId:(NSString *)userId video:(NSURL *)video metadata:(NSData *)metadata completionHandler:(void (^)(AMBNEnrollFaceResult *result, NSError *error))completion;
-
-/*!
- @description Serializes request to enroll face videos without active session created
- @param video url of face video to enroll
- @param userId enrolled user id
- @param metadata metadata to be sent with request
- @return serialized data.
- */
-- (AMBNSerializedRequest *)getSerializedEnrollFaceVideoWithUserId:(NSString *)userId video:(NSURL *)video metadata:(NSData *)metadata;
-
-/*!
  @description Authenticates face video.
  @param video url of face video to authenticate
  @param completion called when authentication is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the video where 1 is maximum liveliness.
@@ -391,24 +411,6 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
  @return serialized data.
  */
 - (AMBNSerializedRequest *)getSerializedAuthenticateFaceVideo:(NSURL *)video metadata:(NSData *)metadata;
-
-/*!
- @description Authenticates face video. Call does not require created session.
- @param video url of face video to authenticate
- @param userId enrolled user id
- @param metadata metadata to be sent with request
- @param completion called when authentication is completed. <b> result.score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled face. <b> result.liveliness </b> is floating point number from 0 to 1 indicating liveliness of the video where 1 is maximum liveliness.
- */
-- (void)authenticateFaceVideoWithUserId:(NSString *)userId video:(NSURL *)video metadata:(NSData *)metadata completionHandler:(void (^)(AMBNAuthenticateResult *result, NSError *error))completion;
-
-/*!
- @description Serializes request to authenticates face video. Call does not require created session.
- @param video url of face video to authenticate
- @param userId enrolled user id
- @param metadata metadata to be sent with request
- @return serialized data.
- */
-- (AMBNSerializedRequest *)getSerializedAuthenticateFaceVideoWithUserId:(NSString *)userId video:(NSURL *)video metadata:(NSData *)metadata;
 
 /*!
  @description Returns view controller used to capture voice audio
@@ -452,24 +454,6 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
 - (AMBNSerializedRequest *)getSerializedEnrollVoice:(NSURL *)voiceFileUrl metadata:(NSData *)metadata;
 
 /*!
- @description Enrolls voice record. Call does not require created session.
- @param voiceFileUrl URL of voice record to authenticate
- @param userId user identifier
- @param metadata metadata to be sent with request
- @param completion called when enrollement is completed. <b> result </b> is no nil when enrollment was successful.
- */
-- (void)enrollVoiceWithUserId:(NSString *)userId voiceFileUrl:(NSURL *)voiceFileUrl metadata:(NSData *)metadata completionHandler:(void (^)(AMBNEnrollVoiceResult *result, NSError *))completion;
-
-/*!
- @description Serializes request to enroll voice record. Call does not require created session.
- @param voiceFileUrl URL of voice record to authenticate
- @param userId user identifier
- @param metadata metadata to be sent with request
- @return serialized data.
- */
-- (AMBNSerializedRequest *)getSerializedEnrollVoiceWithUserId:(NSString *)userId voiceFileUrl:(NSURL *)voiceFileUrl metadata:(NSData *)metadata;
-
-/*!
  @description Authenticates voice record.
  @param voiceUrl of voice record to authenticate
  @param completion called when authentication is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled voice. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the record where 1 is maximum liveliness.
@@ -491,24 +475,6 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
  @return serialized data.
  */
 - (AMBNSerializedRequest *)getSerializedAuthenticateVoice:(NSURL *)voiceFileUrl metadata:(NSData *)metadata;
-
-/*!
- @description Authenticates voice record. Call does not require created session.
- @param userId user identifier
- @param voiceFileUrl url of voice record to authenticate
- @param metadata metadata to be sent with request
- @param completion called when authentication is completed. <b> score </b> is floating point number from 0 to 1 where 1 is maximum similarity to enrolled voice. <b> liveliness </b> is floating point number from 0 to 1 indicating liveliness of the record where 1 is maximum liveliness.
- */
-- (void)authenticateVoiceWithUserId:(NSString *)userId voiceUrl:(NSURL *)voiceUrl metadata:(NSData *)metadata completionHandler:(void (^)(AMBNAuthenticateResult *result, NSError *error))completion;
-
-/*!
- @description Serializes request to authenticate voice record. Call does not require created session.
- @param voiceFileUrl url of voice record to authenticate
- @param userId user identifier
- @param metadata metadata to be sent with request
- @return serialized data.
- */
-- (AMBNSerializedRequest *)getSerializedAuthenticateVoiceWithUserId:(NSString *)userId voiceFileUrl:(NSURL *)voiceFileUrl metadata:(NSData *)metadata;
 
 /*!
  @description Retrieves text to read in case of voice auth/enroll.
@@ -533,21 +499,4 @@ typedef NS_ENUM(NSInteger, AMBNVoiceTokenType) {
  */
 - (AMBNSerializedRequest *)getSerializedGetVoiceTokenWithType:(AMBNVoiceTokenType)type metadata:(NSData *)metadata;
 
-/*!
- @description Retrieves text to read in case of voice auth/enroll. Call does not require created session.
- @param type token type
- @param userId user identifier
- @param metadata metadata to be sent with request
- @param completion called when request is completed. <b> result.text </b> is text to be displayed in recording UI
- */
-- (void)getVoiceTokenWithUserId:(NSString *)userId type:(AMBNVoiceTokenType)type metadata:(NSData *)metadata completionHandler:(void (^)(AMBNVoiceTextResult *result, NSError *error))completion;
-
-/*!
- @description Serializes request to retrieve text to read in case of voice auth/enroll. Call does not require created session.
- @param type token type
- @param userId user identifier
- @param metadata metadata to be sent with request
- @return serialized data.
- */
-- (AMBNSerializedRequest *)getSerializedGetVoiceTokenWithUserId:(NSString *)userId type:(AMBNVoiceTokenType)type metadata:(NSData *)metadata;
 @end

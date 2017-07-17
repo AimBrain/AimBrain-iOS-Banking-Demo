@@ -228,7 +228,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="188" translatesAutoresizingMaskIntoConstraints="NO" id="2e6-oL-wzY">
                                 <rect key="frame" x="66" y="40" width="188" height="40"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Sign in to the Banking Authentication App.">
+                                    <fragment content="Sign in to AimBrain SimuBank">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="HelveticaNeue"/>
@@ -1054,7 +1054,7 @@
                             <outlet property="delegate" destination="oAg-xh-Bhx" id="pp8-E3-Qne"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AimBrain Authentication" id="odS-83-mbS">
+                    <navigationItem key="navigationItem" title="AimBrain SimuBank" id="odS-83-mbS">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="4sA-as-XLa"/>
                     </navigationItem>
                 </tableViewController>

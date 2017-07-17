@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
 
-     [[AMBNManager sharedInstance] configureWithApiKey:@"AIMBRAIN_API_KEY" secret:@"AIMBRAIN_API_SECRET" baseUrl:@"https://api.aimbrain.com:443/v1/"];
+    [[AMBNManager sharedInstance] configureWithApiKey:@"AIMBRAIN_API_KEY" secret:@"AIMBRAIN_API_SECRET"];
 
     [[AMBNManager sharedInstance] start];
 

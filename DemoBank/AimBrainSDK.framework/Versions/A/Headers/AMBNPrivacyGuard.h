@@ -17,7 +17,7 @@
 @property BOOL allViews;
 
 /*!
- @discussion This property is true after privacy guard is invalidated.
+ @discussion This property is false after privacy guard is invalidated.
  */
 @property (readonly) BOOL valid;
 

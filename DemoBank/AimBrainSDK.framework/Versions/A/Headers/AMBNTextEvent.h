@@ -1,9 +1,9 @@
-@import Foundation;
 
-@interface AMBNTextEvent : NSObject
+#import "AMBNBaseEvent.h"
+
+@interface AMBNTextEvent : AMBNBaseEvent
 
 @property NSString * text;
-@property int timestamp;
 @property NSArray * identifiers;
 
 -(instancetype) initWithText: (NSString*) text timestamp: (int) timestamp identifiers: (NSArray *)identifiers;

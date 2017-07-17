@@ -1,7 +1,9 @@
-@import Foundation;
+
+#import "AMBNBaseEvent.h"
+
 @import UIKit;
 
-@interface AMBNTouch : NSObject
+@interface AMBNTouch : AMBNBaseEvent
 
 @property unsigned int touchId;
 @property CGPoint absoluteLocation;
@@ -9,7 +11,6 @@
 @property CGFloat force;
 @property CGFloat radius;
 @property int phase;
-@property int timestamp;
 @property NSArray *identifiers;
 
 

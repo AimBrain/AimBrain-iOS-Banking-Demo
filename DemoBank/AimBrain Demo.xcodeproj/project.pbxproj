@@ -35,13 +35,11 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8CD7201DC28CAD73A8D035DE /* Pods_AimBrain_Demo_Banking_Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B615453B019CA0EDF76CB /* Pods_AimBrain_Demo_Banking_Authentication.framework */; };
 		AC036C74892F13B28FC0973A /* UIViewController+Visibility.m in Sources */ = {isa = PBXBuildFile; fileRef = AC036CA2578AF30611BBC77C /* UIViewController+Visibility.m */; };
+		D018FAD31F19233A00B22961 /* AimBrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D018FAD01F19233A00B22961 /* AimBrainSDK.framework */; };
+		D018FAD41F19233A00B22961 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D018FAD11F19233A00B22961 /* face.bundle */; };
+		D018FAD51F19233A00B22961 /* voice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D018FAD21F19233A00B22961 /* voice.bundle */; };
 		D03986D41D64D3A400B23FCF /* AMBNFaceEnrollmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D03986D11D64D3A400B23FCF /* AMBNFaceEnrollmentManager.m */; };
 		D03986D51D64D3A400B23FCF /* AMBNVoiceEnrollmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D03986D31D64D3A400B23FCF /* AMBNVoiceEnrollmentManager.m */; };
-		D04EFC261D8BDDF000A288C9 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D04EFC241D8BDDF000A288C9 /* face.bundle */; };
-		D04EFC271D8BDDF000A288C9 /* voice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D04EFC251D8BDDF000A288C9 /* voice.bundle */; };
-		D04EFC281D8BDDF500A288C9 /* face.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D04EFC241D8BDDF000A288C9 /* face.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D04EFC291D8BDDF500A288C9 /* voice.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D04EFC251D8BDDF000A288C9 /* voice.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D04EFC2B1D8BE0B100A288C9 /* AimBrainSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04EFC2A1D8BE0B100A288C9 /* AimBrainSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D04EFC291D8BDDF500A288C9 /* voice.bundle in Embed PlugIns */,
-				D04EFC281D8BDDF500A288C9 /* face.bundle in Embed PlugIns */,
 			);
 			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +94,7 @@
 		0CD29A801C5C123000732947 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImage.xcassets; sourceTree = "<group>"; };
 		24C382F9B9AA3CA89A5B545B /* Pods_AimBrain_Demo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AimBrain_Demo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B1CFE64FA3DFE42E33E9A0 /* Pods-AimBrain Demo Banking Authentication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimBrain Demo Banking Authentication.release.xcconfig"; path = "Pods/Target Support Files/Pods-AimBrain Demo Banking Authentication/Pods-AimBrain Demo Banking Authentication.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* AimBrain Demo Banking Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AimBrain Demo Banking Authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* AimBrain SimuBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AimBrain SimuBank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -120,13 +116,13 @@
 		AC036B6E4B5CA04D9003C48B /* UIViewController+Visibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Visibility.h"; sourceTree = "<group>"; };
 		AC036CA2578AF30611BBC77C /* UIViewController+Visibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Visibility.m"; sourceTree = "<group>"; };
 		C2DECD3302982E022A7563D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D018FAD01F19233A00B22961 /* AimBrainSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AimBrainSDK.framework; sourceTree = "<group>"; };
+		D018FAD11F19233A00B22961 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
+		D018FAD21F19233A00B22961 /* voice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = voice.bundle; sourceTree = "<group>"; };
 		D03986D01D64D3A400B23FCF /* AMBNFaceEnrollmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNFaceEnrollmentManager.h; sourceTree = "<group>"; };
 		D03986D11D64D3A400B23FCF /* AMBNFaceEnrollmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNFaceEnrollmentManager.m; sourceTree = "<group>"; };
 		D03986D21D64D3A400B23FCF /* AMBNVoiceEnrollmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBNVoiceEnrollmentManager.h; sourceTree = "<group>"; };
 		D03986D31D64D3A400B23FCF /* AMBNVoiceEnrollmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBNVoiceEnrollmentManager.m; sourceTree = "<group>"; };
-		D04EFC241D8BDDF000A288C9 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
-		D04EFC251D8BDDF000A288C9 /* voice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = voice.bundle; sourceTree = "<group>"; };
-		D04EFC2A1D8BE0B100A288C9 /* AimBrainSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AimBrainSDK.framework; sourceTree = "<group>"; };
 		D610A7CDFE1AB78D94E827E0 /* Pods-AimBrain Demo Banking Authentication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimBrain Demo Banking Authentication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AimBrain Demo Banking Authentication/Pods-AimBrain Demo Banking Authentication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +134,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D04EFC2B1D8BE0B100A288C9 /* AimBrainSDK.framework in Frameworks */,
+				D018FAD31F19233A00B22961 /* AimBrainSDK.framework in Frameworks */,
 				8CD7201DC28CAD73A8D035DE /* Pods_AimBrain_Demo_Banking_Authentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +193,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* AimBrain Demo Banking Authentication.app */,
+				6003F58A195388D20070C39A /* AimBrain SimuBank.app */,
 				6003F5AE195388D20070C39A /* AimBrain Demo Banking Authentication.xctest */,
 			);
 			name = Products;
@@ -206,9 +202,9 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D04EFC2A1D8BE0B100A288C9 /* AimBrainSDK.framework */,
-				D04EFC241D8BDDF000A288C9 /* face.bundle */,
-				D04EFC251D8BDDF000A288C9 /* voice.bundle */,
+				D018FAD01F19233A00B22961 /* AimBrainSDK.framework */,
+				D018FAD11F19233A00B22961 /* face.bundle */,
+				D018FAD21F19233A00B22961 /* voice.bundle */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -323,7 +319,7 @@
 			);
 			name = "AimBrain Demo Banking Authentication";
 			productName = AimBrain;
-			productReference = 6003F58A195388D20070C39A /* AimBrain Demo Banking Authentication.app */;
+			productReference = 6003F58A195388D20070C39A /* AimBrain SimuBank.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* AimBrain Demo_Tests */ = {
@@ -355,12 +351,14 @@
 			attributes = {
 				CLASSPREFIX = AMBN;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "AimBrain Solutions";
+				ORGANIZATIONNAME = "Paweł Kupiec";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = RDZ58KAK89;
+						DevelopmentTeam = 99P84848J9;
+						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = 99P84848J9;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -389,9 +387,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D04EFC261D8BDDF000A288C9 /* face.bundle in Resources */,
+				D018FAD41F19233A00B22961 /* face.bundle in Resources */,
 				0C78CE6E1C4B1A6F0058E217 /* Localizable.strings in Resources */,
-				D04EFC271D8BDDF000A288C9 /* voice.bundle in Resources */,
+				D018FAD51F19233A00B22961 /* voice.bundle in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				0CD29A811C5C123000732947 /* LaunchImage.xcassets in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -658,47 +656,6 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = RDZ58KAK89;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AimBrain/AimBrain Demo-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
-					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
-					"\"$(PROJECT_DIR)/SDK/include\"/**",
-				);
-				INFOPLIST_FILE = "AimBrain/AimBrain Demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/system",
-					"$(PROJECT_DIR)/AimBrainSDK",
-					"$(PROJECT_DIR)/SDK",
-				);
-				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.demobank;
-				PRODUCT_NAME = "AimBrain Demo Banking Authentication";
-				PROVISIONING_PROFILE = "f6cfc9d6-794d-4bea-a0c7-af6d709505c3";
-				PROVISIONING_PROFILE_SPECIFIER = "Mobon Developer Wildcard";
-				WARNING_CFLAGS = "-Wpartial-availability";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		6003F5C1195388D20070C39A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29B1CFE64FA3DFE42E33E9A0 /* Pods-AimBrain Demo Banking Authentication.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: AimBrain Solutions LTD (99P84848J9)";
 				DEVELOPMENT_TEAM = 99P84848J9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,10 +679,51 @@
 					"$(PROJECT_DIR)/SDK",
 				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.demobank;
-				PRODUCT_NAME = "AimBrain Demo Banking Authentication";
-				PROVISIONING_PROFILE = "8881e7a7-dd0f-4b67-9d61-add7b10cb974";
-				PROVISIONING_PROFILE_SPECIFIER = "Demo Banking AppStore 1207";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.simubank;
+				PRODUCT_NAME = "AimBrain SimuBank";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WARNING_CFLAGS = "-Wpartial-availability";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B1CFE64FA3DFE42E33E9A0 /* Pods-AimBrain Demo Banking Authentication.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 99P84848J9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AimBrain/AimBrain Demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"$(PROJECT_DIR)/SDK/include\"/**",
+				);
+				INFOPLIST_FILE = "AimBrain/AimBrain Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)/AimBrainSDK",
+					"$(PROJECT_DIR)/SDK",
+				);
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimbrain.simubank;
+				PRODUCT_NAME = "AimBrain SimuBank";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WARNING_CFLAGS = "-Wpartial-availability";
 				WRAPPER_EXTENSION = app;
 			};
@@ -736,6 +734,7 @@
 			baseConfigurationReference = 6A61B1647425E82D33A86588 /* Pods-AimBrain Demo_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99P84848J9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -759,6 +758,7 @@
 			baseConfigurationReference = 0C32431184E4B768FAF667FB /* Pods-AimBrain Demo_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99P84848J9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
